@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mooli&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+body {
+  background-image: url(weather.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Mooli", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: rgb(182, 177, 177); /* Text color */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .dark-mode{
+    background-image: radial-gradient(circle at center center, transparent 0%,rgb(0,0,0) 85%),linear-gradient(78deg, rgba(192, 192, 192,0.05) 0%, rgba(192, 192, 192,0.05) 50%,rgba(60, 60, 60,0.05) 50%, rgba(60, 60, 60,0.05) 100%),linear-gradient(227deg, rgba(97, 97, 97,0.05) 0%, rgba(97, 97, 97,0.05) 50%,rgba(52, 52, 52,0.05) 50%, rgba(52, 52, 52,0.05) 100%),linear-gradient(240deg, rgba(98, 98, 98,0.05) 0%, rgba(98, 98, 98,0.05) 50%,rgba(249, 249, 249,0.05) 50%, rgba(249, 249, 249,0.05) 100%),linear-gradient(187deg, rgba(1, 1, 1,0.05) 0%, rgba(1, 1, 1,0.05) 50%,rgba(202, 202, 202,0.05) 50%, rgba(202, 202, 202,0.05) 100%),linear-gradient(101deg, rgba(61, 61, 61,0.05) 0%, rgba(61, 61, 61,0.05) 50%,rgba(254, 254, 254,0.05) 50%, rgba(254, 254, 254,0.05) 100%),linear-gradient(176deg, rgba(237, 237, 237,0.05) 0%, rgba(237, 237, 237,0.05) 50%,rgba(147, 147, 147,0.05) 50%, rgba(147, 147, 147,0.05) 100%),linear-gradient(304deg, rgba(183, 183, 183,0.05) 0%, rgba(183, 183, 183,0.05) 50%,rgba(57, 57, 57,0.05) 50%, rgba(57, 57, 57,0.05) 100%),radial-gradient(circle at center center, hsl(351,4%,12%),hsl(351,4%,12%));
+    color:wheat;
+    
+    
+  }
+  .dark-button{
+    cursor: pointer;
+    position:relative;
+    bottom:250px;
+    left: 135px;
+    background-color: transparent;
+ 
+  }
+  
+
+
+  .container {
+
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    right:60px;
+    width: 350px;
+   
+
+  }
+  
+  .header h1 {
+    font-size: 5vh;
+    font-weight: bold;
+    color: #0077FF; 
+   letter-spacing: 2px; 
+    text-align: center; 
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+  }
+  
+  .location h2 {
+    font-size: 4vh;
+    color: #333;
+    margin-bottom: 5px;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .location p {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .weather-info {
+    margin-top: 10px;
+  }
+  .current-weather-img{
+    width:30%;
+  }
+  .current-weather {
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    margin-top: 5px;
+  }
+  .temperature,
+  .condition,
+  .humidity {
+    flex: 1;
+    padding: 20px;
+    
+  }
+  .temperature h3,
+  .condition h3 ,
+  .humidity h3{
+    font-size: 18px;
+    color: #333;
+  }
+  .temperature p,
+  .condition p,
+  .humidity p{
+    font-size: 24px;
+    color: #333;
+  }
+  
+  
+  
+  .forecast-day {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Background with transparency */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .forecast-day p:first-child {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .forecast-day p:last-child {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  /* Add styling for the search input and button */
+  .search {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search input {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .search button {
+    background-color: #4d9eea ;
+    /* Button background color */
+    border: skyblue;
+    box-shadow: #4d9eea;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    
+    /* Button text color */
+  }
+  
+  .search button:hover {
+    background-color:#325169;
+    /* Button background color on hover */
+  }
+ 
+
+  
+
+
+
+.header h1 {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Animation for weather information */
+.weather-info {
+  animation: slideInFromLeft 1s ease-out;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+
+.search {
+  animation: faded 1s ease-out;
+}
+
+@keyframes faded {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+.search button {
+  transition: background-color 0.4s ease;
+}
+.search button:hover {
+  background-color: #325169;
+ 
+  transform: scale(1.1);
+}
+.temperature, .condition, .humidity {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  text-align: center;
+}
+
+.temperature h3, .condition h3, .humidity h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.temperature p, .condition p, .humidity p {
+  font-size: 30px;
+  color: #333;
+}
+
+  
+/*    Date and time   --------------------------------------------------------   */
+
+
+.date-time {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  animation: fadeIn 1s;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.date-time:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+    
+    /*  End of   Date and time   --------------------------------------------------------   */
+  
+  

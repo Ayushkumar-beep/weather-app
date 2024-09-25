@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Weather App</h1>
+            <div class="search">
+                <input type="text" placeholder="Enter a location name">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <button class="dark-button" onclick="darkFunction()"><i class="fas fa-moon" style="color: #e61919;"></i></button>
+        </div>
+
+        <div class="weather-info">
+            <div class="location">
+                <h2>Write current City Name</h2>
+            </div>
+
+            <div class="current-weather">
+                <div class="temperature">
+                    <h3>Temperature</h3>
+                    <p>75°F</p>
+                </div>
+
+                <div class="condition">
+                    <h3>Condition</h3>
+                    <p>Sunny</p>
+                </div>
+
+                <div class="humidity">
+                    <h3>Humidity</h3>
+                    <p>80%</p>
+                </div>
+            </div>
+
+            <div class="date-time">
+               
+                <p id="currentDateTime"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
